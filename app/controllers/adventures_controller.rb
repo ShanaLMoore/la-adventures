@@ -10,6 +10,9 @@ class AdventuresController < ApplicationController
   # GET /adventures/1
   # GET /adventures/1.json
   def show
+    @adventure = Adventure.find(params[:id])
+    @comments = @adventure.comments.all
+    @comment = @adventure.comments.build
   end
 
   # GET /adventures/new

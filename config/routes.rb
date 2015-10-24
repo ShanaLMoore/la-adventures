@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :comments
+  get 'pages/info'
+
   resources :adventures
 
   root 'adventures#index'
